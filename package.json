@@ -24,6 +24,6 @@
     "eslint": "5.16.0",
     "eslint-config-standard": "12.0.0",
     "eslint-plugin-import": "2.16.0",
-    "nodemon": "1.18.10"
+    "nodemon": "1.18.11"
   }
 }
