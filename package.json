@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "eslint": "5.3.0",
-    "eslint-config-prettier": "4.3.0",
+    "eslint-config-prettier": "5.0.0",
     "eslint-plugin-prettier": "3.1.0",
     "husky": "2.4.1",
     "nodemon": "1.19.1",
