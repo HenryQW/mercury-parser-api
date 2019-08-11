@@ -14,7 +14,7 @@ router.route('/parser').get(async (req, res) => {
         try {
             const contentType = req.query.contentType || 'html';
             let headers = new Object();
-            if (typeof(req.query.headers) !== 'undefined') {
+            if (typeof req.query.headers !== 'undefined') {
                 headers = JSON.parse(req.query.headers);
             }
             result = await Mercury.parse(req.query.url, {
