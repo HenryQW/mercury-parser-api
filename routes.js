@@ -13,8 +13,13 @@ router.route('/parser').get(async (req, res) => {
     if (req.query.url) {
         try {
             const contentType = req.query.contentType || 'html';
+            let headers = new Object();
+            if (typeof(req.query.headers) !== 'undefined') {
+                headers = JSON.parse(req.query.headers);
+            }
             result = await Mercury.parse(req.query.url, {
                 contentType,
+                headers
             });
         } catch (error) {
             result = { error: true, messages: error.message };

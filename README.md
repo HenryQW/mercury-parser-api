@@ -28,7 +28,7 @@ docker run -p 3000:3000 -d mercury-parser-api
 
 ## Usage
 
-GET /parser?url=[required:url]&contentType=[optional:contentType]
+GET /parser?url=[required:url]&contentType=[optional:contentType]&headers=[optional:url-encoded-headers]
 
 ```bash
 curl localhost:3000/parser?url=https://www.bbc.co.uk/news/science-environment-35876621
