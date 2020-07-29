@@ -26,7 +26,7 @@
     "express": "4.17.1",
     "helmet": "3.23.3",
     "morgan": "1.10.0",
-    "snyk": "^1.368.0"
+    "snyk": "^1.369.0"
   },
   "devDependencies": {
     "eslint": "7.5.0",
