@@ -32,7 +32,7 @@
     "eslint": "7.15.0",
     "eslint-config-prettier": "6.15.0",
     "eslint-plugin-prettier": "3.2.0",
-    "husky": "4.3.0",
+    "husky": "4.3.5",
     "nodemon": "2.0.6",
     "prettier": "2.2.1"
   },
