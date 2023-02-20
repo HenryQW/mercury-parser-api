@@ -55,6 +55,47 @@ Response
 }
 ```
 
+## Adding a custom extractor
+
+You can add [a custom extractor](https://github.com/postlight/parser/blob/main/src/extractors/custom/README.md) to
+the parser by binding your customizer module at `/app/customizer`.
+
+```bash
+docker run -p 3000:3000 -d \
+    -v my-customizer-dir:/app/customizer \
+    mercury-parser-api
+```
+
+In the above example, the `my-customizer-dir` directory will contain `index.js`, such as:
+
+```js
+const NaverMobileBlogExtractor = {
+  domain: 'm.blog.naver.com',
+  title: {
+    selectors: ['.se-title-text'],
+  },
+  author: {
+    selectors: ['.blog_author'],
+  },
+  content: {
+    selectors: ['.se-main-container'],
+  }, 
+  date_published: {
+    selectors: ['.blog_date'],
+    format: 'YYYY. MM. DD. HH:mm',
+    timezone: 'Asia/Seoul',
+  },
+};
+
+function customize(parser) {
+  parser.addExtractor(NaverMobileBlogExtractor);
+}
+
+module.exports = { customize };
+
+console.log('📜My custom extractor is loaded.');
+```
+
 ## License
 
 Licensed under either of the below, at your preference:
